@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+  <title>Sopa de letras Muisca</title>
+
+<link rel="stylesheet" type="text/css" href="style.css"  media="all">
+<link rel="stylesheet" href="bootstrap.min.css" >
+<link rel="stylesheet" type="text/css" href="jquery-ui.css">
+<link href="jquery.tagit.css" rel="stylesheet" type="text/css">
+
+<script type="text/javascript" src="jquery.min.js"></script> 
+<script type="text/javascript" src="wordfind.js"></script> 
+<script type="text/javascript" src="wordfindgame.js"></script> 
+<script type="text/javascript" src="bootstrap.min.js" ></script>
+<script type="text/javascript" src="jquery-ui.min.js"  ></script>
+<script type="text/javascript" src="tag-it.js"></script>
+
+
+</head>
+
+<body>
+    <style media="print">.ocultar {display:none;}.col-md-3 { width: 25%;float: left;}.col-md-9 {width: 75%;float: left;}
+    </style>
+
+<div class="container">
+    <div class="row align-items-center" style="background-image: url(https://scontent-bog1-1.xx.fbcdn.net/v/t39.30808-6/245032765_597040387995867_5748178727339269678_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=730e14&_nc_eui2=AeFEh-Y3sl1pca5vN33JycMourM4ycg_vAe6szjJyD-8B0DCfklhQk3xDd83KELHJ9LSEwbV94g9E0UXpUWM3RuG&_nc_ohc=i5lHnP6mnswAX_anwJ4&_nc_ht=scontent-bog1-1.xx&oh=a3ebe6903bb59e3939fe565f04d5099a&oe=61654B8D); opacity: 0.9;" alt="audiovisual">
+
+    <div class="row" style="margin-top: -100px">
+       
+        
+        <script type="text/javascript">
+            var mytag;
+            $(document).ready(function () {
+                mytag = $("#myTags").tagit({});
+                Crear();
+            });
+</script>
+    <div style="visibility:hidden">
+<div class="row  ocultar text-center">
+    <br />
+    <div class="panel panel-default">
+    <div class="panel-heading"><h4>ACTIVIDAD DE EVALUACION - CAPITULO 1 - EL ORIGEN MUISCA<strong>"Crear Juego"</strong></h4></div>
+    <div class="panel-body"><ul id="myTags">
+    <li style="font-family: comfortaa;">OSCURIDAD</li>
+    <li style="font-family: comfortaa;">LUZ</li>
+    <li style="font-family: comfortaa;">ESPOSO</li>
+    <li style="font-family: comfortaa;">BOCHICA</li>
+    <li style="font-family: comfortaa;">BACHUE</li>
+    <li style="font-family: comfortaa;">INUNDACION</li>
+    <li style="font-family: comfortaa;">ANTEPASADOS</li>
+    <li style="font-family: comfortaa;">CHIMINIGAGUA</li>
+    <li style="font-family: comfortaa;">MUISCA</li>
+    <li style="font-family: comfortaa;">SOMBRA</li>
+    <li style="font-family: comfortaa;">CUCHAVIVA</li>
+    <li style="font-family: comfortaa;">SIE</li>
+</ul></div>
+  </div>
+</div>
+
+
+
+    </div>
+    
+
+ 
+<div class="row text-center">
+<div class="ocultar">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Header -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-4331617637495482"
+     data-ad-slot="2764029251"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script><br/><br/>
+</div>
+<div>
+
+<div class="row">
+    <div class="col-md-1"></div>
+        <div class="col-md-10">
+     <div class="panel panel-default" style="background-color: hsla(244, 100%, 100%, .8);">
+     <div class="panel-heading ocultar"><h4 style="font-family:createland; font-size: 2.5rem;">Encuentra los personajes y temas de El Origen Muisca en tu sopa de letras "Konecta Muisca"</h4></div>
+    <div class="panel-body">
+         <form action="https://portafolio-web.github.io/dibujo-ova/dibuja.html">
+            <p>
+        <input type="image" src="images/siguiente.png" style="position: absolute; right: 10%; top: 12%;" ></p>
+</form>
+    <div class="ocultar">
+    <button onclick="Crear();" class="btn btn-success btn-lg" style="background-color: #4A9B9F; font-family: comfortaa;"> Reiniciar</button>
+<!--     <button onclick="window.print();" class="btn btn-info btn-lg "> Imprimir</button>-->
+    <button id='solve' class="btn btn-danger btn-lg" style="background-color: #B4423C; font-family:comfortaa;">  Resolver</button>
+    <!-- <a href="#" class="btn btn-default btn-lg" > Descargar</a>-->
+        </div>
+        </div>
+</div>
+</div>
+<div class="container">
+        <div class="row">
+            <center>
+        <div class="col-md-1">
+                        <div id='Palabras'></div>
+
+        </div>
+        <center>
+                <div class="col-md-6"
+                style="padding-left: 160px;">
+                        <div id='juego'></div></center>
+
+                </div>
+                </center>
+            </div>
+    </div>
+  </div>
+</div>
+
+
+    
+    
+    
+    <script>
+    var words = [];
+	var gamePuzzle;
+	function Crear() {
+    
+	    datos = mytag[0].textContent.trim().split("×");
+        
+	    for (i = 0; i < (datos.length)-1; i++) {
+	       words.push(datos[i]);
+
+	    }
+	    $('#Juegos').show();
+	    gamePuzzle = wordfindgame.create(datos, '#juego', '#Palabras');
+	    var puzzle = wordfind.newPuzzle(datos, { height: 18, width: 18, fillBlanks: false });
+        wordfind.print(puzzle);   
+      }
+		$('#solve').click( function() {wordfindgame.solve(gamePuzzle, words);});
+    </script>
+    </div>
+</body>
+</html>
